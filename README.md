@@ -63,30 +63,30 @@ npm run build
 npm run start
 ```
 
-Running Instructions
-Backend: Ensure your backend is running on http://localhost:5000. This server serves APIs for managing the cart items.
-Frontend: The frontend should be running on http://localhost:3000. This will be the interface where users can see and interact with the cart items.
+# Running Instructions
+* Backend: Ensure your backend is running on http://localhost:5000. This server serves APIs for managing the cart items.
+* Frontend: The frontend should be running on http://localhost:3000. This will be the interface where users can see and interact with the cart items.
 
-Additional Requirements and Dependencies
+# Additional Requirements and Dependencies
 Backend Dependencies
-express: Web framework for Node.js.
-mongoose: MongoDB ODM for interacting with MongoDB.
-cors: Middleware to handle cross-origin requests.
-dotenv: For managing environment variables.
+* express: Web framework for Node.js.
+* mongoose: MongoDB ODM for interacting with MongoDB.
+* cors: Middleware to handle cross-origin requests.
+* dotenv: For managing environment variables.
 Frontend Dependencies
-next: React framework for building the frontend.
-tailwindcss: Utility-first CSS framework for styling.
-react: React library.
-react-dom: React package for rendering the components.
-typescript: TypeScript support for Next.js.
-Assumptions Made During Development
-MongoDB: MongoDB is running on localhost:27017. If MongoDB is installed on a different port or remotely, adjust the MONGO_URI in the .env file accordingly.
+* next: React framework for building the frontend.
+* tailwindcss: Utility-first CSS framework for styling.
+* react: React library.
+* react-dom: React package for rendering the components.
+* typescript: TypeScript support for Next.js.
 
-API Base URL: The frontend assumes that the backend API is hosted locally at http://localhost:5000. If the backend is deployed remotely, the API URL in the frontend code should be updated.
+# Assumptions Made During Development
+*MongoDB: MongoDB is running on localhost:27017. If MongoDB is installed on a different port or remotely, adjust the MONGO_URI in the .env file accordingly.
 
-Authentication: For simplicity, this project assumes there is no user authentication. Anyone can add, remove, or view the cart.
+* API Base URL: The frontend assumes that the backend API is hosted locally at http://localhost:5000. If the backend is deployed remotely, the API URL in the frontend code should be updated.
 
-No Cart Persistence for User Sessions: The cart is not tied to any user session in this version. It’s a basic cart implementation. The cart data is fetched from the backend but is not persisted beyond the current session.
+* Authentication: For simplicity, this project assumes there is no user authentication. Anyone can add, remove, or view the cart.
+
 
 ## Learn More
 
