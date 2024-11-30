@@ -14,41 +14,22 @@ Backend: Node.js, MongoDB
 Database: MongoDB
 
 # Setup Instructions
-1. Backend Setup
-Install Node.js and MongoDB:
-Ensure that you have both Node.js and MongoDB installed. You can install MongoDB by following the official MongoDB Installation Guide.
-
-Clone the Repository: Clone the backend repository from your GitHub or local setup.
-
-bash
-Copy code
-git clone <your-backend-repo-url>
-cd my-cart-backend
+* Install Node.js and MongoDB: Ensure that you have both Node.js and MongoDB installed. You can install MongoDB by following the official MongoDB Installation Guide.
 Install Dependencies: Install the necessary Node.js packages using npm or yarn.
 
-bash
-Copy code
-npm install
-Start the Backend: Start the backend server.
-
-bash
-Copy code
-npm run dev
-The backend should now be running at http://localhost:5000.
-
-2. Frontend Setup
-Clone the Frontend Repository: Clone the frontend repository from your GitHub or local setup.
+Clone the Repository: Clone the repository from your GitHub or local setup.
 
 ```
-git clone <your-frontend-repo-url>
+git clone <your-repo-url>
 cd my-cart-frontend
 ```
-Install Dependencies: Install the required frontend dependencies.
+
+Install Dependencies: Install the required frontend & backend dependencies.
 ```
 npm install
 ```
 
-Run the backend server, it will show connected to MongoDB
+Run the backend server(running on port 5000), it will show connected to MongoDB
 ```
 npx ts-node ./backend/server.ts
 ```
@@ -61,6 +42,32 @@ OR
 ```
 npm run build
 npm run start
+```
+
+To add cartItems into the database 
+```
+mongo
+```
+```
+use my-cart-app
+```
+```
+db.cartitems.insertMany([
+  {
+    title: "GATE XE",
+    description: "Fluid Mechanics, Food Technology, Eng. Math, General Aptitude",
+    price: 29999,
+    discount: 25,
+    image: "https://placehold.co/100x100"
+  },
+  {
+    title: "GATE XL",
+    description: "Fluid Mechanics, Food Technology, Eng. Math, General Aptitude",
+    price: 999,
+    discount: 50,
+    image: "https://placehold.co/100x100"
+  }
+]);
 ```
 
 # Running Instructions
