@@ -39,25 +39,34 @@ The backend should now be running at http://localhost:5000.
 2. Frontend Setup
 Clone the Frontend Repository: Clone the frontend repository from your GitHub or local setup.
 
-bash
-Copy code
+```
 git clone <your-frontend-repo-url>
 cd my-cart-frontend
+```
 Install Dependencies: Install the required frontend dependencies.
-
-bash
-Copy code
+```
 npm install
-Run the Frontend: Start the frontend development server.
+```
 
-bash
-Copy code
+Run the backend server, it will show connected to MongoDB
+```
+npx ts-node ./backend/server.ts
+```
+
+then open a terminal and run the fronted(will run at port 3000)
+```
 npm run dev
-The frontend should now be running at http://localhost:3000.
+```
+OR
+```
+npm run build
+npm run start
+```
 
 Running Instructions
 Backend: Ensure your backend is running on http://localhost:5000. This server serves APIs for managing the cart items.
 Frontend: The frontend should be running on http://localhost:3000. This will be the interface where users can see and interact with the cart items.
+
 Additional Requirements and Dependencies
 Backend Dependencies
 express: Web framework for Node.js.
