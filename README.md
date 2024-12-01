@@ -14,8 +14,6 @@ Backend: Node.js, MongoDB
 Database: MongoDB
 
 # Setup Instructions
-* Install Node.js and MongoDB: Ensure that you have both Node.js and MongoDB installed. You can install MongoDB by following the official MongoDB Installation Guide.
-Install Dependencies: Install the necessary Node.js packages using npm or yarn.
 
 Clone the Repository: Clone the repository from your GitHub or local setup.
 
@@ -24,14 +22,9 @@ git clone <your-repo-url>
 cd my-cart-frontend
 ```
 
-Install Dependencies: Install the required frontend & backend dependencies.
+Install Dependencies: Install the required frontend dependencies.
 ```
 npm install
-```
-
-Run the backend server(running on port 5000), it will show connected to MongoDB
-```
-npx ts-node ./backend/server.ts
 ```
 
 then open a terminal and run the fronted(will run at port 3000)
@@ -44,42 +37,12 @@ npm run build
 npm run start
 ```
 
-* To add cartItems into the database 
-```
-mongo
-```
-```
-use my-cart-app
-```
-```
-db.cartitems.insertMany([
-  {
-    title: "GATE XE",
-    description: "Fluid Mechanics, Food Technology, Eng. Math, General Aptitude",
-    price: 29999,
-    discount: 25,
-    image: "https://placehold.co/100x100"
-  },
-  {
-    title: "GATE XL",
-    description: "Fluid Mechanics, Food Technology, Eng. Math, General Aptitude",
-    price: 999,
-    discount: 50,
-    image: "https://placehold.co/100x100"
-  }
-]);
-```
-
 # Running Instructions
-* Backend: Ensure your backend is running on http://localhost:5000. This server serves APIs for managing the cart items.
+* Backend: The backend is running on a render web service https://my-cart-app-5abj.onrender.com/cart. This server serves APIs for managing the cart items.
 * Frontend: The frontend should be running on http://localhost:3000. This will be the interface where users can see and interact with the cart items.
 
 # Additional Requirements and Dependencies
-Backend Dependencies
-* express: Web framework for Node.js.
-* mongoose: MongoDB ODM for interacting with MongoDB.
-* cors: Middleware to handle cross-origin requests.
-* dotenv: For managing environment variables.
+
 Frontend Dependencies
 * next: React framework for building the frontend.
 * tailwindcss: Utility-first CSS framework for styling.
@@ -87,10 +50,16 @@ Frontend Dependencies
 * react-dom: React package for rendering the components.
 * typescript: TypeScript support for Next.js.
 
-# Assumptions Made During Development
-*MongoDB: MongoDB is running on localhost:27017. If MongoDB is installed on a different port or remotely, adjust the MONGO_URI in the .env file accordingly.
+Backend Dependencies(no need for it sice we have a web service)
+* express: Web framework for Node.js.
+* mongoose: MongoDB ODM for interacting with MongoDB.(Using cloud mongodb service)
+* cors: Middleware to handle cross-origin requests.
+* dotenv: For managing environment variables.
 
-* API Base URL: The frontend assumes that the backend API is hosted locally at http://localhost:5000. If the backend is deployed remotely, the API URL in the frontend code should be updated.
+# Assumptions Made During Development
+*MongoDB: MongoDB is running on mongodb+srv://c<user>:<db_password>@cluster0.qxdn2.mongodb.net/<my-cart-app>.
+
+* API Base URL: The frontend assumes that the backend API is hosted on we server at ttps://my-cart-app-5abj.onrender.com/cart. If the backend is deployed remotely, the API URL in the frontend code should be updated.
 
 * Authentication: For simplicity, this project assumes there is no user authentication. Anyone can add, remove, or view the cart.
 
