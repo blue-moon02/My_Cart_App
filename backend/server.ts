@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB Connection URI
-const mongoURI = 'mongodb://localhost:27017/my-cart-app';
+const mongoURI = 'mongodb+srv://chouhan1302:yjn4BPpOza9H6nxM@cluster0.qxdn2.mongodb.net/my-cart-app?retryWrites=true&w=majority&appName=Cluster0';
 
 // MongoDB Connection
 mongoose.connect(mongoURI)
