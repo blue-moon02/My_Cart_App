@@ -51,11 +51,11 @@ app.get('/cart', async (req: Request, res: Response) => {
 });
 
 // Route to handle removing an item from the cart
-app.delete('cart/:id', async (req: Request, res: Response) => {
-  const { id } = req.params;
+app.delete('cart/:title', async (req: Request, res: Response) => {
+  const { title } = req.params;
   try {
     // Delete the cart item by ID
-    const result = await CartItem.findByIdAndDelete(id);
+    const result = await CartItem.findByIdAndDelete(title);
     // Send a success response
     if (result) {
       res.status(200).json({ message: 'Item removed successfully' });

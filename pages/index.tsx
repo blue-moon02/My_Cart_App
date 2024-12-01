@@ -21,10 +21,8 @@ const Index = () => {
   }, []);
 
   const handleRemove =  (title: string) => {
-    setCartItems(cartItems.filter((item) => item.title !== title));
+      setCartItems(cartItems.filter((item) => item.title !== title));
     setTotal(cartItems.reduce((acc, item) => acc + item.price, 0));
-      setSnackbarMessage('Item removed successfully!');
-      setIsSnackbarOpen(true);
   };
 
   return (
@@ -32,7 +30,7 @@ const Index = () => {
       <header className="w-full bg-white shadow-md">
         <div className="container mx-auto flex justify-between items-center py-4 px-6">
           <div className="flex items-center">
-            <img src="./public/logo.png" alt="Logo" className="mr-2" />
+            <img src="https://img.icons8.com/?size=100&id=EvazdCr0ldoX&format=png&color=000000" width="50" alt="Logo" className="mr-2" />
             <span className="text-2xl font-bold text-purple-600">nest</span>
             <span className="text-sm text-gray-500 ml-2">EMPOWERING TOMORROW</span>
           </div>
