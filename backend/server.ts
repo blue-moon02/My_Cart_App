@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 
 const app = express();
-const port = 5000;
+const port = 10000;
 
 // Middleware
 app.use(cors());
