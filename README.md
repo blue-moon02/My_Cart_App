@@ -44,7 +44,7 @@ npm run build
 npm run start
 ```
 
-To add cartItems into the database 
+* To add cartItems into the database 
 ```
 mongo
 ```
