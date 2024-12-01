@@ -9,7 +9,7 @@ const Index = () => {
   useEffect(() => {
     // Fetch cart data from backend API (for now, using dummy data)
     const fetchCartData = async () => {
-      const response = await fetch('http://localhost:10000/cart');
+      const response = await fetch('https://my-cart-app-5abj.onrender.com/cart');
       const data = await response.json();
       setCartItems(data.items);
       setTotal(data.total);
