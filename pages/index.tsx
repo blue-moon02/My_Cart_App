@@ -1,18 +1,15 @@
 import { useState, useEffect } from 'react';
 import CartItem from '../components/CartItem';
 import CartSummary from '../components/CartSummary';
-import Snackbar from '../components/Snackbar';
 
 const Index = () => {
   const [cartItems, setCartItems] = useState<any[]>([]);
   const [total, setTotal] = useState(0);
-  const [snackbarMessage, setSnackbarMessage] = useState('');
-  const [isSnackbarOpen, setIsSnackbarOpen] = useState(false);
 
   useEffect(() => {
     // Fetch cart data from backend API (for now, using dummy data)
     const fetchCartData = async () => {
-      const response = await fetch('http://localhost:5000/cart');
+      const response = await fetch('http://localhost:10000/cart');
       const data = await response.json();
       setCartItems(data.items);
       setTotal(data.total);
